@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>vue入门</title>
+</head>
+<script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+
+<body>
+	<div id="app">
+		{{message.moble}}
+
+		<ul>
+			<li>{{school[0]}}</li>
+			<li>{{school[1]}}</li>
+			<li>{{school[2]}}</li>
+		</ul>
+	</div>
+</body>
+<script>
+	var vm = new Vue({
+		el: "#app", // 选择元素
+		data: { // 操作
+			message: {
+				"moble" : 110,
+				"add" : "beijing",
+				"other" :"english"
+			},
+			school:['北京校区','上海校区','南京校区','其他校区']
+		}
+
+	})
+</script>
+</html>
