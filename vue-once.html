@@ -8,18 +8,23 @@
 <body>
 <div id="app">
     <span v-once>{{msg}}</span>
-    <button v-on:click="this.change"> click me </button>
+    <button v-on:click="this.change"> click me</button>
+    <button @click="seen = !seen">点击</button>
+    <span v-if="seen">{{Math.PI}}</span>
+    <a v-bind:href="url">21213231</a>
 </div>
 </body>
 <script>
     new Vue({
         el: "#app",
         data: {
-            msg: "hello world!"
+            msg: "hello world!",
+            seen: false,
+            url:"https://www.baidu.com/"
         },
         methods: {
-            change:function () {
-                this.msg =  this.msg.split("").reverse().join("");
+            change: function () {
+                this.msg = this.msg.split("").reverse().join("");
             }
         }
     })
