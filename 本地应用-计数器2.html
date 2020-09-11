@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+    <meta charset="utf-8">
+    <title>本地应用 - 计数器</title>
+</head>
+<script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+
+<body>
+<div id="app">
+    <button type="button" value="-" @click="number++">增加</button>
+    <h3>{{number}}</h3>
+    <button type="button" value="+" @click="number--">减少</button>
+</div>
+</body>
+<script>
+    new Vue({
+        el: "#app",
+        data: {
+            number: 1,
+        }
+    })
+</script>
+
+</html>
