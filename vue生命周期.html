@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="">
+<head>
+    <meta charset="UTF-8">
+    <title>vue的生命周期</title>
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+</head>
+<body>
+<div id="app">
+    <p>Using mustaches: {{ rawHtml }}</p>
+</div>
+</body>
+<script>
+    var vm = new Vue({
+        el: "#app",
+        data: {rawHtml: "<h1>hello Vue</h1>"},
+        created:function () {
+            this.rawHtml = this.rawHtml.split("").reverse().join("");
+        }
+    });
+
+</script>
+</html>
